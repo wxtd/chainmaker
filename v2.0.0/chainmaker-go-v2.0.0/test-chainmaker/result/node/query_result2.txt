@@ -1,0 +1,1 @@
+QUERY contract resp: message:"SUCCESS" contract_result:<result:"{\"fileHash\":\"hh3456df5799b87c77e7f88\",\"fileName\":\"name123\",\"time\":6543234}" gas_used:15842823 > tx_id:"016156a2b5384ff9b7520f5a1276f33e86dc7d90246542598f4c57221355010d" 

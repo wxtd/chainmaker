@@ -1,0 +1,10 @@
+func initContract() {
+func upgrade() {
+func NewFact(fileHash string, fileName string, time int32) *Fact {
+func (f *Fact) getEasyCodec() *EasyCodec {
+func (f *Fact) toJson() string {
+func (f *Fact) marshal() []byte {
+func unmarshalToFact(data []byte) *Fact {
+func save() {
+func findByFileHash() {
+func main() {
