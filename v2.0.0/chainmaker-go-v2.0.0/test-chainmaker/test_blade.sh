@@ -2,7 +2,8 @@
 
 . utils.sh
 
-BLADE_ADDRESS=/home/ubuntu/ms/ChaosEngineer/chaos1.5/chaosblade-1.5.0/target/chaosblade-1.5.0
+# BLADE_ADDRESS=/home/ubuntu/ms/ChaosEngineer/chaos1.5/chaosblade-1.5.0/target/chaosblade-1.5.0
+BLADE_ADDRESS=./tools/target/chaosblade-1.5.0
 BLADE=${BLADE_ADDRESS}/blade
 TIMING=30
 TIME_FLAG=--timeout ${TIMING}
