@@ -4,7 +4,7 @@
 
 . utils.sh
 
-NODE_RESULT_ADDRESS=result/node
+NODE_RESULT_ADDRESS=$RESULT_ADDRESS/node
 LOG_ADDRESS=/home/ubuntu/ms/chainmaker/v2.0.0/chainmaker-go-v2.0.0/scripts/docker/tmp
 # node_list=(cm-node1 cm-node2 cm-node3 cm-node4)
 log_list=(log1 log2 log3 log4)
