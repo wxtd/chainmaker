@@ -85,6 +85,12 @@ cd ../../test-chainmaker/
 
 cp -r ../scripts/docker/config ./testdata
 
+
+# 总流程（测试以下所有）
+./run.sh
+# ----------------------------------------
+
+# or 分项执行
 # 基础query & invoke
 # 关于query
 ./test_query_or_invoke.sh query 1 1 chain_002 find_by_file_hash file_hash ab3456df5799b87c77e7f88

@@ -14,6 +14,7 @@ SDK1_ADDRESS=${TESTDATA_ADDRESS}/sdk_config1.yml
 SDK2_ADDRESS=${TESTDATA_ADDRESS}/sdk_config2.yml
 SDK3_ADDRESS=${TESTDATA_ADDRESS}/sdk_config3.yml
 SDK4_ADDRESS=${TESTDATA_ADDRESS}/sdk_config4.yml
+LOG=$RESULT_ADDRESS/test.log
 
 setGlobals() {
   local ORG_NUM=$1
@@ -41,27 +42,28 @@ C_YELLOW='\033[1;33m'
 
 # println echos string
 function println() {
-  echo -e "$1"
+  # echo -e "$1"
+  echo -e $@
 }
 
 # errorln echos i red color
 function errorln() {
-  println "${C_RED}${1}${C_RESET}"
+  println "${C_RED}$@${C_RESET}"
 }
 
 # successln echos in green color
 function successln() {
-  println "${C_GREEN}${1}${C_RESET}"
+  println "${C_GREEN}$@${C_RESET}"
 }
 
 # infoln echos in blue color
 function infoln() {
-  println "${C_BLUE}${1}${C_RESET}"
+  println "${C_BLUE}$@${C_RESET}"
 }
 
 # warnln echos in yellow color
 function warnln() {
-  println "${C_YELLOW}${1}${C_RESET}"
+  println "${C_YELLOW}$@${C_RESET}"
 }
 
 # fatalln echos in red color and exits with fail status
@@ -123,3 +125,7 @@ start_docker() {
 #     fi  
 #   done
 # }
+
+if [[ ! -f $RESULT_ADDRESS/test.log ]]; then
+  touch $RESULT_ADDRESS/test.log
+fi

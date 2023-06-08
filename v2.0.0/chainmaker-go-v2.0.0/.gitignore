@@ -37,3 +37,5 @@ nohup.out
 main/chainmaker
 vendor
 cover.out
+**.dat
+**.log

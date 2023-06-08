@@ -48,9 +48,10 @@ function test_node_data_consistency() {
     done
     # cat $NODE_RESULT_ADDRESS/temp.txt
     if [[ -s $NODE_RESULT_ADDRESS/common.txt ]]; then
+        successln "Common part:"
         cat $NODE_RESULT_ADDRESS/common.txt
     else 
-        println "No!"
+        errorln "No common parts!"
     fi
     rm $NODE_RESULT_ADDRESS/common.txt
     rm $NODE_RESULT_ADDRESS/temp*.txt

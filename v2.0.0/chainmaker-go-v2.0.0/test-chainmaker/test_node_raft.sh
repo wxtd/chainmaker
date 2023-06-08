@@ -11,7 +11,7 @@ example_invoke_cmd=./example_invoke.sh
 test_node_data_consistency_cmd=./test_node_data_consistency.sh
 
 function test_raft() {
-    local test_node=cm-node2
+    local test_node=cm-node3
     $example_query_cmd 1
 
     stop_docker $test_node
@@ -22,7 +22,7 @@ function test_raft() {
 
     start_docker $test_node
 
-    println "sleep 10"
+    println "sleep 10~"
     sleep 10
     $test_node_data_consistency_cmd
 }

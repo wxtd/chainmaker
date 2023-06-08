@@ -6,7 +6,7 @@
 
 # Firstly query and then save this result as log1.txt
 saveQueryResult() {
-    infoln "Querying~"
+    println "Querying~"
     # println $#
     
     processParam $@
@@ -29,7 +29,7 @@ saveQueryResult() {
 # compare query result with the query result firstly
 CompareQueryResult() {
     # println "CompareQueryResult"
-    infoln "Querying~"
+    println "Querying~"
     processParam $@
 
     ${cmc} client contract user get \
@@ -44,16 +44,16 @@ CompareQueryResult() {
     local result2=`cat $QUERY_OR_INVOKE_RESULT_ADDRESS/query_result2.txt | sed -n "/result:/ p" | awk '{print $5}'`
     # echo $result2
     if [ "$result1" == "$result2" ]; then
-        println "Query result is the same!"
+        successln "Query result is the same!"
     else
-        println "Query result is different"
+        errorln "Query result is different"
     fi
 }
 
 # Invoke cmd result
 # Chaincode invoke successful. result: status:200
 ivokeChaincode() {
-    infoln "Invoking~"
+    println "Invoking~"
     processParam $@
 
     # ADDRESS=$(dirname "$PWD")
@@ -72,9 +72,9 @@ ivokeChaincode() {
     local t=`cat $invoke_result | awk '{print $4}'`
     # echo $t
     if [[ "$t" =~ "$success" ]];then
-        println "Invoke Success!"
+        successln "Invoke Success!"
     else
-        println "Invoke Failed"
+        errorln "Invoke Failed"
     fi
 }
 

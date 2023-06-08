@@ -6,8 +6,9 @@
 
 function test_if_use_docker_architecture() {
     local cmd=`docker ps | awk '{print $2}' | grep chainmaker`
+    println $cmd
     if [[ $cmd ]]; then
-        infoln "Using Docker Architecture!"
+        successln "Using Docker Architecture!"
     else
         warnln "Not Using Docker Architecture!"
     fi

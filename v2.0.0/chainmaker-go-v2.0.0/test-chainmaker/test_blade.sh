@@ -6,21 +6,23 @@
 BLADE_ADDRESS=./tools/target/chaosblade-1.5.0
 BLADE=${BLADE_ADDRESS}/blade
 TIMING=30
-TIME_FLAG=--timeout ${TIMING}
+TIME_FLAG="--timeout ${TIMING}"
 
 
 function test_blade() {
     query1
-
-    ${BLADE} c cpu load --cpu-percent 60 ${TIME_FLAG}
+    println "Creating cpu blade~"
+    ${BLADE} c cpu load --cpu-percent 60 ${TIME_FLAG} >> $LOG 2>&1
     sleep_for_some_time
     query2
     sleep_for_some_time
-    ${BLADE} c disk burn --read --write ${TIME_FLAG}
+    println "Creating disk blade~"
+    ${BLADE} c disk burn --read --write ${TIME_FLAG} >> $LOG 2>&1
     sleep_for_some_time
     query2
     sleep_for_some_time
-    ${BLADE} c mem load --mode ram --mem-percent 50 ${TIME_FLAG}
+    println "Creating mem blade~"
+    ${BLADE} c mem load --mode ram --mem-percent 50 ${TIME_FLAG} >> $LOG 2>&1
     sleep_for_some_time
     query2
     sleep_for_some_time

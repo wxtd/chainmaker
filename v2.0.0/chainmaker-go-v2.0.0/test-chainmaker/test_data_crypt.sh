@@ -15,7 +15,7 @@ function test_data_crypt() {
     # configtxlator proto_decode --input $BLOCK_ADDRESS/mychannel_$1.block --type common.Block --output $BLOCK_ADDRESS/trace.json
 
     local value=`cat $BLOCK_ADDRESS/block_$1.json | sed -n "/\"value\":\s/ p" | awk '{print $2}'`
-    echo $value
+    println $value
     # echo ${#value}
 }
 

@@ -1,0 +1,122 @@
+[0;34m2023-06-08 19:28:57[0m
+-------------------------------------------------
+[0;34m./test_docker_architecture.sh # Testing if using docker architecture[0m
+chainmaker:v2.0.0 chainmaker:v2.0.0 chainmaker:v2.0.0 chainmaker:v2.0.0
+[0;32mUsing Docker Architecture![0m
+[0;34m./test_query_or_invoke.sh query 1 1 chain_002 find_by_file_hash file_hash ab3456df5799b87c77e7f88[0m
+[0;34mUsing organization 1[0m
+Querying~
+[0;34m./test_query_or_invoke.sh query 2 1 chain_002 find_by_file_hash file_hash ab3456df5799b87c77e7f88 # Testing query command[0m
+[0;34mUsing organization 1[0m
+Querying~
+[0;32mQuery result is the same![0m
+[0;34m./test_query_or_invoke.sh invoke 1 chain_002 save file_name name008 file_hash bb3456df5799b87c77e7f88 time 6543234 # Testing invoke command[0m
+[0;34mUsing organization 1[0m
+Invoking~
+[0;32mInvoke Success![0m
+[0;34m./detect_encryption_method.sh # Testing all encryption algorithms[0m
+ecdsa-with-SHA256
+ecdsa-with-SHA256
+ecdsa-with-SHA256
+ecdsa-with-SHA256
+ecdsa-with-SHA256
+ecdsa-with-SHA256
+ecdsa-with-SHA256
+ecdsa-with-SHA256
+ecdsa-with-SHA256
+ecdsa-with-SHA256
+ecdsa-with-SHA256
+ecdsa-with-SHA256
+ecdsa-with-SHA256
+ecdsa-with-SHA256
+ecdsa-with-SHA256
+ecdsa-with-SHA256
+ecdsa-with-SHA256
+ecdsa-with-SHA256
+ecdsa-with-SHA256
+ecdsa-with-SHA256
+ecdsa-with-SHA256
+ecdsa-with-SHA256
+ecdsa-with-SHA256
+ecdsa-with-SHA256
+ecdsa-with-SHA256
+ecdsa-with-SHA256
+ecdsa-with-SHA256
+ecdsa-with-SHA256
+ecdsa-with-SHA256
+ecdsa-with-SHA256
+ecdsa-with-SHA256
+ecdsa-with-SHA256
+ecdsa-with-SHA256
+ecdsa-with-SHA256
+ecdsa-with-SHA256
+ecdsa-with-SHA256
+ecdsa-with-SHA256
+ecdsa-with-SHA256
+ecdsa-with-SHA256
+ecdsa-with-SHA256
+ecdsa-with-SHA256
+ecdsa-with-SHA256
+ecdsa-with-SHA256
+ecdsa-with-SHA256
+ecdsa-with-SHA256
+ecdsa-with-SHA256
+ecdsa-with-SHA256
+ecdsa-with-SHA256
+ecdsa-with-SHA256
+ecdsa-with-SHA256
+ecdsa-with-SHA256
+ecdsa-with-SHA256
+[0;34m./test_blade.sh # Testing maintainability Creating faults with chaosblade, a chaos engineering tool[0m
+[0;34mUsing organization 2[0m
+Querying~
+Creating cpu blade~
+[0;34mUsing organization 2[0m
+Querying~
+[0;32mQuery result is the same![0m
+Creating disk blade~
+[0;34mUsing organization 2[0m
+Querying~
+[0;32mQuery result is the same![0m
+Creating mem blade~
+[0;34mUsing organization 2[0m
+Querying~
+[0;32mQuery result is the same![0m
+[0;34m./test_data_crypt.sh # Detecting whether the block data content is desensitized and encrypted[0m
+"LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUNpRENDQWkrZ0F3SUJBZ0lERGR6YU1Bb0dDQ3FHU000OUJBTUNNSUdLTVFzd0NRWURWUVFHRXdKRFRqRVEKTUE0R0ExVUVDQk1IUW1WcGFtbHVaekVRTUE0R0ExVUVCeE1IUW1WcGFtbHVaekVmTUIwR0ExVUVDaE1XZDNndApiM0puTXk1amFHRnBibTFoYTJWeUxtOXlaekVTTUJBR0ExVUVDeE1KY205dmRDMWpaWEowTVNJd0lBWURWUVFECkV4bGpZUzUzZUMxdmNtY3pMbU5vWVdsdWJXRnJaWEl1YjNKbk1CNFhEVEl3TVRJd09EQTJOVE0wTTFvWERUSTEKTVRJd056QTJOVE0wTTFvd2daRXhDekFKQmdOVkJBWVRBa05PTVJBd0RnWURWUVFJRXdkQ1pXbHFhVzVuTVJBdwpEZ1lEVlFRSEV3ZENaV2xxYVc1bk1SOHdIUVlEVlFRS0V4WjNlQzF2Y21jekxtTm9ZV2x1YldGclpYSXViM0puCk1ROHdEUVlEVlFRTEV3WmpiR2xsYm5ReExEQXFCZ05WQkFNVEkyTnNhV1Z1ZERFdWMybG5iaTUzZUMxdmNtY3oKTG1Ob1lXbHViV0ZyWlhJdWIzSm5NRmt3RXdZSEtvWkl6ajBDQVFZSUtvWkl6ajBEQVFjRFFnQUUzRk81d1lrOQpzVitNNkxoUktQdUV4Y0hSWTlOUDVEZjUrV25JWkQ5L1Z2V24zQjArTTFwaUYxUGFSeUNkakdvTjBIbERCdUZsCjI1enAzczJRRmswalBLTjdNSGt3RGdZRFZSMFBBUUgvQkFRREFnR21NQThHQTFVZEpRUUlNQVlHQkZVZEpRQXcKS1FZRFZSME9CQ0lFSUxJdmZLSnVuYXNDM1AyYjBia1gyMGxjbWRJdzI4bHFuZlVZY3EyZXdha2hNQ3NHQTFVZApJd1FrTUNLQUlOR1BaUjBzVndydll0Rm5lVEQ2R1V5QlFmbHdwVG1KMHFDc2d2ZEZnSW45TUFvR0NDcUdTTTQ5CkJBTUNBMGNBTUVRQ0lBNE5GTkg0TjdrUjBKblMxRlhjbkNRRnRNa2tJaXJrZ0cxdFZ3R3BNOWF2QWlBeGc0L3QKL0RkelJDUUwyTjFyWXovRnJsdlgxM2FQYjU2ZFJGdkxRU2hacWc9PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==" "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUNpRENDQWkrZ0F3SUJBZ0lERGR6YU1Bb0dDQ3FHU000OUJBTUNNSUdLTVFzd0NRWURWUVFHRXdKRFRqRVEKTUE0R0ExVUVDQk1IUW1WcGFtbHVaekVRTUE0R0ExVUVCeE1IUW1WcGFtbHVaekVmTUIwR0ExVUVDaE1XZDNndApiM0puTXk1amFHRnBibTFoYTJWeUxtOXlaekVTTUJBR0ExVUVDeE1KY205dmRDMWpaWEowTVNJd0lBWURWUVFECkV4bGpZUzUzZUMxdmNtY3pMbU5vWVdsdWJXRnJaWEl1YjNKbk1CNFhEVEl3TVRJd09EQTJOVE0wTTFvWERUSTEKTVRJd056QTJOVE0wTTFvd2daRXhDekFKQmdOVkJBWVRBa05PTVJBd0RnWURWUVFJRXdkQ1pXbHFhVzVuTVJBdwpEZ1lEVlFRSEV3ZENaV2xxYVc1bk1SOHdIUVlEVlFRS0V4WjNlQzF2Y21jekxtTm9ZV2x1YldGclpYSXViM0puCk1ROHdEUVlEVlFRTEV3WmpiR2xsYm5ReExEQXFCZ05WQkFNVEkyTnNhV1Z1ZERFdWMybG5iaTUzZUMxdmNtY3oKTG1Ob1lXbHViV0ZyWlhJdWIzSm5NRmt3RXdZSEtvWkl6ajBDQVFZSUtvWkl6ajBEQVFjRFFnQUUzRk81d1lrOQpzVitNNkxoUktQdUV4Y0hSWTlOUDVEZjUrV25JWkQ5L1Z2V24zQjArTTFwaUYxUGFSeUNkakdvTjBIbERCdUZsCjI1enAzczJRRmswalBLTjdNSGt3RGdZRFZSMFBBUUgvQkFRREFnR21NQThHQTFVZEpRUUlNQVlHQkZVZEpRQXcKS1FZRFZSME9CQ0lFSUxJdmZLSnVuYXNDM1AyYjBia1gyMGxjbWRJdzI4bHFuZlVZY3EyZXdha2hNQ3NHQTFVZApJd1FrTUNLQUlOR1BaUjBzVndydll0Rm5lVEQ2R1V5QlFmbHdwVG1KMHFDc2d2ZEZnSW45TUFvR0NDcUdTTTQ5CkJBTUNBMGNBTUVRQ0lBNE5GTkg0TjdrUjBKblMxRlhjbkNRRnRNa2tJaXJrZ0cxdFZ3R3BNOWF2QWlBeGc0L3QKL0RkelJDUUwyTjFyWXovRnJsdlgxM2FQYjU2ZFJGdkxRU2hacWc9PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg=="
+[0;34m./test_data_duration.sh # Testing transaction idempotency, persistence[0m
+[0;34mUsing organization 2[0m
+Querying~
+[0;34mUsing organization 2[0m
+Querying~
+[0;32mQuery result is the same![0m
+[0;34mUsing organization 2[0m
+Querying~
+[0;32mQuery result is the same![0m
+[0;34m./test_node_high_available.sh invoke 0 1 chain_002 save file_name name008 file_hash bb3456df5799b87c77e7f88 time 6543234 # Testing node high availability[0m
+Stopping cm-node1
+Stop Success
+[0;34mUsing organization 2[0m
+Invoking~
+[0;32mInvoke Success![0m
+Starting cm-node1
+Start Success
+[0;34m./test_node_data_consistency.sh # Detecting node data consistency, support failover or not[0m
+[0;31mNo common parts![0m
+[0;34m./test_node_raft.sh # Validating Consensus Algorithms[0m
+[0;34mUsing organization 2[0m
+Querying~
+Stopping cm-node3
+Stop Success
+[0;34mUsing organization 2[0m
+Querying~
+[0;32mQuery result is the same![0m
+[0;34mUsing organization 1[0m
+Invoking~
+[0;31mInvoke Failed[0m
+Starting cm-node3
+Start Success
+sleep 10~
+[0;32mCommon part:[0m
+[25]
+-------------------------------------------------
