@@ -21,7 +21,10 @@ function test_node_data_consistency() {
             | sed -n '/commit\sblock\s\[[0-9]\+\]/ p' \
             | awk '{print $7,$8,$9}' ORS="\n" \
             | grep -o '\[.*\]' \
-            > $NODE_RESULT_ADDRESS/temp${j}.txt
+            > $NODE_RESULT_ADDRESS/valid_log${j}.txt
+
+        sort -u $NODE_RESULT_ADDRESS/valid_log${j}.txt > $NODE_RESULT_ADDRESS/temp${j}.txt
+
             # | awk '{for(i=9; i<=14; i++) {print $i}}' ORS="\n"
         let j++
     done
@@ -55,6 +58,7 @@ function test_node_data_consistency() {
     fi
     rm $NODE_RESULT_ADDRESS/common.txt
     rm $NODE_RESULT_ADDRESS/temp*.txt
+    rm $NODE_RESULT_ADDRESS/valid_log*.txt
 }
 
 # for range get log
